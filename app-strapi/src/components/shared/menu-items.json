@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_menu_items",
+  "info": {
+    "displayName": "MenuItems"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "text"
+    },
+    "href": {
+      "type": "text"
+    },
+    "isDropdown": {
+      "type": "boolean"
+    },
+    "dropdowItems": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
