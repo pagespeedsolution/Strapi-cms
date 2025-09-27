@@ -5,6 +5,9 @@ module.exports = ({ env }) => ({
       defaultLimit: 100,
       maxLimit: 100,
       playgroundAlways: true, 
+      apolloServer: {
+        introspection: true,  
+      },
     },
   },
 });
