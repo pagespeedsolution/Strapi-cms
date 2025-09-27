@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_faqs",
+  "info": {
+    "displayName": "Faqs"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Contentpara": {
+      "type": "richtext"
+    },
+    "QuestionAnswers": {
+      "type": "component",
+      "component": "shared.title-sub-title",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

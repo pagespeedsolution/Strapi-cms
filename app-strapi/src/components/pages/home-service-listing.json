@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_home_service_listings",
+  "info": {
+    "displayName": "HomeServiceListing"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "ServiceListItems": {
+      "type": "component",
+      "component": "shared.service-list-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_pages_cta_1s",
+  "info": {
+    "displayName": "CTA1"
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "CTATitle": {
+      "type": "text"
+    },
+    "CTAText": {
+      "type": "text"
+    },
+    "CTAButton": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": false
+    },
+    "CTARightIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

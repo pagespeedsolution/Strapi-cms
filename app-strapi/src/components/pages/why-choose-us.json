@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pages_why_chooseuses",
+  "info": {
+    "displayName": "WhyChooseUs"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Points": {
+      "type": "component",
+      "component": "shared.icon-label",
+      "repeatable": true
+    },
+    "RightsideImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_service_list_items",
+  "info": {
+    "displayName": "ServiceListItem"
+  },
+  "options": {},
+  "attributes": {
+    "ServiceLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Content": {
+      "type": "text"
+    },
+    "Link": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

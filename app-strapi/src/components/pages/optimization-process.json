@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_optimization_processes",
+  "info": {
+    "displayName": "OptimizationProcess"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "ProcessImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

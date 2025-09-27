@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_result_screenshots",
+  "info": {
+    "displayName": "ResultScreenshots"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "blocks"
+    },
+    "ScreenshotsImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

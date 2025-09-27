@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_pages_contentwith_links",
+  "info": {
+    "displayName": "ContentwithLinks"
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "text"
+    },
+    "Link": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

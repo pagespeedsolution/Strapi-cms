@@ -1,0 +1,78 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HomeHeroBanner": {
+      "type": "component",
+      "component": "pages.home-hero",
+      "repeatable": false
+    },
+    "AboutUs": {
+      "type": "component",
+      "component": "pages.about-us",
+      "repeatable": false
+    },
+    "ServiceListing": {
+      "type": "component",
+      "component": "pages.home-service-listing",
+      "repeatable": false
+    },
+    "B2BServiceBanner": {
+      "type": "component",
+      "component": "pages.cta-1",
+      "repeatable": false
+    },
+    "result_screenshot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::why-choose.why-choose"
+    },
+    "WhyChooseUs": {
+      "type": "component",
+      "component": "pages.why-choose-us",
+      "repeatable": false
+    },
+    "count_percentage_banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::count-percentage-banner.count-percentage-banner"
+    },
+    "optimization_process": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::optimization-process.optimization-process"
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::testimonial.testimonial"
+    },
+    "faq": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq.faq"
+    },
+    "BlogsTitles": {
+      "type": "text"
+    },
+    "all_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-detail.blog-detail"
+    },
+    "footer_form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::footer-form.footer-form"
+    }
+  }
+}

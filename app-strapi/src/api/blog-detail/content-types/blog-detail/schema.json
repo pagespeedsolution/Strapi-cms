@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_details",
+  "info": {
+    "singularName": "blog-detail",
+    "pluralName": "blog-details",
+    "displayName": "AllBlogs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ReferenceTitle": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "text"
+    },
+    "blog_categories_list": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog-categories-list.blog-categories-list"
+    },
+    "HeroBanner": {
+      "type": "component",
+      "component": "pages.blog-hero-banner",
+      "repeatable": false
+    },
+    "BlogContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.richtext",
+        "shared.images",
+        "heading.h1",
+        "heading.h2",
+        "heading.h3",
+        "heading.h4",
+        "heading.h5",
+        "heading.h6"
+      ]
+    },
+    "YouMayAlsoLikeBlogTitle": {
+      "type": "text"
+    },
+    "YouMayAlsoLikeBlog": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-detail.blog-detail"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_listing_pages",
+  "info": {
+    "singularName": "blog-listing-page",
+    "pluralName": "blog-listing-pages",
+    "displayName": "BlogListingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroBanner": {
+      "type": "component",
+      "component": "pages.home-hero",
+      "repeatable": false
+    },
+    "Categories": {
+      "type": "text"
+    }
+  }
+}

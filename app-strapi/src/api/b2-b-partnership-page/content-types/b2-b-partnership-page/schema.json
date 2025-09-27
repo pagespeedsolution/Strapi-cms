@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "b2_b_partnership_pages",
+  "info": {
+    "singularName": "b2-b-partnership-page",
+    "pluralName": "b2-b-partnership-pages",
+    "displayName": "B2BPartnershipPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Herobanner": {
+      "type": "component",
+      "component": "pages.hero-banner",
+      "repeatable": false
+    },
+    "B2BAboutUs": {
+      "type": "component",
+      "component": "pages.service-aboutus",
+      "repeatable": false
+    },
+    "B2BPartnershipServices": {
+      "type": "component",
+      "component": "pages.why-choose-us",
+      "repeatable": false
+    },
+    "count_percentage_banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::count-percentage-banner.count-percentage-banner"
+    },
+    "optimization_process": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::optimization-process.optimization-process"
+    },
+    "CustomPricingPlan": {
+      "type": "component",
+      "component": "pages.custom-pricing-plan",
+      "repeatable": false
+    },
+    "result_screenshot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::why-choose.why-choose"
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::testimonial.testimonial"
+    },
+    "our_client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::our-client.our-client"
+    },
+    "faq": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq.faq"
+    },
+    "footer_form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::footer-form.footer-form"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pages_count_portfolio_banners",
+  "info": {
+    "displayName": "CountPortfolioBanner"
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "NumberText": {
+      "type": "component",
+      "component": "shared.title-sub-title",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

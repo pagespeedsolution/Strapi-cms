@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_categories_lists",
+  "info": {
+    "singularName": "blog-categories-list",
+    "pluralName": "blog-categories-lists",
+    "displayName": "BlogCategoriesList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CategoryTitle": {
+      "type": "component",
+      "component": "pages.title",
+      "repeatable": false
+    },
+    "ReferenceTitle": {
+      "type": "string"
+    }
+  }
+}

@@ -410,6 +410,376 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
+  collectionName: 'about_us_pages';
+  info: {
+    displayName: 'AboutUsPage';
+    pluralName: 'about-us-pages';
+    singularName: 'about-us-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AboutUsContent: Schema.Attribute.Component<'pages.about-us', false>;
+    count_percentage_banner: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::count-percentage-banner.count-percentage-banner'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroBanner: Schema.Attribute.Component<'pages.hero-banner', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us-page.about-us-page'
+    > &
+      Schema.Attribute.Private;
+    MissionVision: Schema.Attribute.Component<'pages.mission-vision', false>;
+    our_clients: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::our-client.our-client'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonial: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial.testimonial'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiB2BPartnershipPageB2BPartnershipPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'b2_b_partnership_pages';
+  info: {
+    displayName: 'B2BPartnershipPage';
+    pluralName: 'b2-b-partnership-pages';
+    singularName: 'b2-b-partnership-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    B2BAboutUs: Schema.Attribute.Component<'pages.service-aboutus', false>;
+    B2BPartnershipServices: Schema.Attribute.Component<
+      'pages.why-choose-us',
+      false
+    >;
+    count_percentage_banner: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::count-percentage-banner.count-percentage-banner'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CustomPricingPlan: Schema.Attribute.Component<
+      'pages.custom-pricing-plan',
+      false
+    >;
+    faq: Schema.Attribute.Relation<'oneToOne', 'api::faq.faq'>;
+    footer_form: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::footer-form.footer-form'
+    >;
+    Herobanner: Schema.Attribute.Component<'pages.hero-banner', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::b2-b-partnership-page.b2-b-partnership-page'
+    > &
+      Schema.Attribute.Private;
+    optimization_process: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::optimization-process.optimization-process'
+    >;
+    our_client: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::our-client.our-client'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    result_screenshot: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::why-choose.why-choose'
+    >;
+    testimonial: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial.testimonial'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogCategoriesListBlogCategoriesList
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_categories_lists';
+  info: {
+    displayName: 'BlogCategoriesList';
+    pluralName: 'blog-categories-lists';
+    singularName: 'blog-categories-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CategoryTitle: Schema.Attribute.Component<'pages.title', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-categories-list.blog-categories-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    ReferenceTitle: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogDetailBlogDetail extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_details';
+  info: {
+    displayName: 'AllBlogs';
+    pluralName: 'blog-details';
+    singularName: 'blog-detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blog_categories_list: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::blog-categories-list.blog-categories-list'
+    >;
+    BlogContent: Schema.Attribute.DynamicZone<
+      [
+        'shared.richtext',
+        'shared.images',
+        'heading.h1',
+        'heading.h2',
+        'heading.h3',
+        'heading.h4',
+        'heading.h5',
+        'heading.h6',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroBanner: Schema.Attribute.Component<'pages.blog-hero-banner', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-detail.blog-detail'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    ReferenceTitle: Schema.Attribute.String;
+    Slug: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    YouMayAlsoLikeBlog: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-detail.blog-detail'
+    >;
+    YouMayAlsoLikeBlogTitle: Schema.Attribute.Text;
+  };
+}
+
+export interface ApiBlogListingPageBlogListingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'blog_listing_pages';
+  info: {
+    displayName: 'BlogListingPage';
+    pluralName: 'blog-listing-pages';
+    singularName: 'blog-listing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Categories: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroBanner: Schema.Attribute.Component<'pages.home-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-listing-page.blog-listing-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
+  collectionName: 'contact_us_pages';
+  info: {
+    displayName: 'ContactUsPage';
+    pluralName: 'contact-us-pages';
+    singularName: 'contact-us-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ContactUsItem: Schema.Attribute.Component<'pages.contact-us-item', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer_form: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::footer-form.footer-form'
+    >;
+    HeroBanner: Schema.Attribute.Component<'pages.home-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-us-page.contact-us-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCountPercentageBannerCountPercentageBanner
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'count_percentage_banners';
+  info: {
+    displayName: 'CountPercentageBanner';
+    pluralName: 'count-percentage-banners';
+    singularName: 'count-percentage-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CountPercentageBanner: Schema.Attribute.Component<
+      'pages.count-portfolio-banner',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::count-percentage-banner.count-percentage-banner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
+  collectionName: 'faqs';
+  info: {
+    displayName: 'Faq';
+    pluralName: 'faqs';
+    singularName: 'faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Faqs: Schema.Attribute.Component<'pages.faqs', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterFormFooterForm extends Struct.CollectionTypeSchema {
+  collectionName: 'footer_forms';
+  info: {
+    displayName: 'FooterForm';
+    pluralName: 'footer-forms';
+    singularName: 'footer-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FooterForm: Schema.Attribute.Component<'pages.footer-form', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-form.footer-form'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CopyrightText: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    Logo: Schema.Attribute.Component<'shared.logo-and-links', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    QuickLinks: Schema.Attribute.Component<'shared.links', true>;
+    QuickLinksTitle: Schema.Attribute.String;
+    ServiceListTitle: Schema.Attribute.String;
+    ServicesLinks: Schema.Attribute.Component<'shared.links', true>;
+    SocialLinks: Schema.Attribute.Component<'shared.logo-and-links', true>;
+    SocialMediaLinks: Schema.Attribute.Component<'shared.logo-and-links', true>;
+    Subtext: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
   collectionName: 'headers';
   info: {
@@ -441,6 +811,245 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
+  collectionName: 'home_pages';
+  info: {
+    displayName: 'HomePage';
+    pluralName: 'home-pages';
+    singularName: 'home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AboutUs: Schema.Attribute.Component<'pages.about-us', false>;
+    all_blogs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-detail.blog-detail'
+    >;
+    B2BServiceBanner: Schema.Attribute.Component<'pages.cta-1', false>;
+    BlogsTitles: Schema.Attribute.Text;
+    count_percentage_banner: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::count-percentage-banner.count-percentage-banner'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Relation<'oneToOne', 'api::faq.faq'>;
+    footer_form: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::footer-form.footer-form'
+    >;
+    HomeHeroBanner: Schema.Attribute.Component<'pages.home-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page.home-page'
+    > &
+      Schema.Attribute.Private;
+    optimization_process: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::optimization-process.optimization-process'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    result_screenshot: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::why-choose.why-choose'
+    >;
+    ServiceListing: Schema.Attribute.Component<
+      'pages.home-service-listing',
+      false
+    >;
+    testimonial: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial.testimonial'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhyChooseUs: Schema.Attribute.Component<'pages.why-choose-us', false>;
+  };
+}
+
+export interface ApiOptimizationProcessOptimizationProcess
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'optimization_processes';
+  info: {
+    displayName: 'OptimizationProcess';
+    pluralName: 'optimization-processes';
+    singularName: 'optimization-process';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::optimization-process.optimization-process'
+    > &
+      Schema.Attribute.Private;
+    OptimizationProcess: Schema.Attribute.Component<
+      'pages.optimization-process',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOurClientOurClient extends Struct.CollectionTypeSchema {
+  collectionName: 'our_clients';
+  info: {
+    displayName: 'OurClient';
+    pluralName: 'our-clients';
+    singularName: 'our-client';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ClientsLogos: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-client.our-client'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicesDetailsPageServicesDetailsPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'services_details_pages';
+  info: {
+    displayName: 'ServicesDetailsPage';
+    pluralName: 'services-details-pages';
+    singularName: 'services-details-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    count_percentage_banner: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::count-percentage-banner.count-percentage-banner'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CustomPricingPlan: Schema.Attribute.Component<
+      'pages.custom-pricing-plan',
+      false
+    >;
+    faq: Schema.Attribute.Relation<'oneToOne', 'api::faq.faq'>;
+    footer_form: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::footer-form.footer-form'
+    >;
+    HeroBanner: Schema.Attribute.Component<'pages.hero-banner', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-details-page.services-details-page'
+    > &
+      Schema.Attribute.Private;
+    optimization_process: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::optimization-process.optimization-process'
+    >;
+    OurTopServices: Schema.Attribute.Component<'pages.why-choose-us', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    result_screenshot: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::why-choose.why-choose'
+    >;
+    ServiceAboutus: Schema.Attribute.Component<'pages.service-aboutus', false>;
+    testimonial: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::testimonial.testimonial'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhyChooseUs: Schema.Attribute.Component<'pages.why-choose-us', false>;
+  };
+}
+
+export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
+  collectionName: 'testimonials';
+  info: {
+    displayName: 'Testimonial';
+    pluralName: 'testimonials';
+    singularName: 'testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::testimonial.testimonial'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Testimonials: Schema.Attribute.Component<'pages.testimonials', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWhyChooseWhyChoose extends Struct.CollectionTypeSchema {
+  collectionName: 'why_chooses';
+  info: {
+    displayName: 'ResultScreenshots';
+    pluralName: 'why-chooses';
+    singularName: 'why-choose';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::why-choose.why-choose'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhyChooseUs: Schema.Attribute.Component<'pages.result-screenshots', false>;
   };
 }
 
@@ -954,7 +1563,23 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-us-page.about-us-page': ApiAboutUsPageAboutUsPage;
+      'api::b2-b-partnership-page.b2-b-partnership-page': ApiB2BPartnershipPageB2BPartnershipPage;
+      'api::blog-categories-list.blog-categories-list': ApiBlogCategoriesListBlogCategoriesList;
+      'api::blog-detail.blog-detail': ApiBlogDetailBlogDetail;
+      'api::blog-listing-page.blog-listing-page': ApiBlogListingPageBlogListingPage;
+      'api::contact-us-page.contact-us-page': ApiContactUsPageContactUsPage;
+      'api::count-percentage-banner.count-percentage-banner': ApiCountPercentageBannerCountPercentageBanner;
+      'api::faq.faq': ApiFaqFaq;
+      'api::footer-form.footer-form': ApiFooterFormFooterForm;
+      'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::optimization-process.optimization-process': ApiOptimizationProcessOptimizationProcess;
+      'api::our-client.our-client': ApiOurClientOurClient;
+      'api::services-details-page.services-details-page': ApiServicesDetailsPageServicesDetailsPage;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::why-choose.why-choose': ApiWhyChooseWhyChoose;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

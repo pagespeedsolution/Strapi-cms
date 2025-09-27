@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pages_footer_forms",
+  "info": {
+    "displayName": "FooterForm"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_icon_title_descriptions",
+  "info": {
+    "displayName": "IconTitleDescription"
+  },
+  "options": {},
+  "attributes": {
+    "IconLabel": {
+      "type": "component",
+      "component": "shared.icon-label",
+      "repeatable": false
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

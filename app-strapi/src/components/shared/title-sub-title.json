@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_title_sub_titles",
+  "info": {
+    "displayName": "TitleSubTitle"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "SubTitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

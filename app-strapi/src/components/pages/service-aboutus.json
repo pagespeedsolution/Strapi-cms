@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pages_service_aboutuses",
+  "info": {
+    "displayName": "ServiceAboutus"
+  },
+  "options": {},
+  "attributes": {
+    "ServiceLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

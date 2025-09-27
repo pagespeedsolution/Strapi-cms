@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "AboutUsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroBanner": {
+      "type": "component",
+      "component": "pages.hero-banner",
+      "repeatable": false
+    },
+    "AboutUsContent": {
+      "type": "component",
+      "component": "pages.about-us",
+      "repeatable": false
+    },
+    "MissionVision": {
+      "type": "component",
+      "component": "pages.mission-vision",
+      "repeatable": false
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::testimonial.testimonial"
+    },
+    "count_percentage_banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::count-percentage-banner.count-percentage-banner"
+    },
+    "our_clients": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::our-client.our-client"
+    }
+  }
+}

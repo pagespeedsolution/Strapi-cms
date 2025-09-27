@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pages_titles",
+  "info": {
+    "displayName": "Title"
+  },
+  "options": {},
+  "attributes": {
+    "CategoryTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

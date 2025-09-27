@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_pages_custom_pricing_plans",
+  "info": {
+    "displayName": "CustomPricingPlan"
+  },
+  "options": {},
+  "attributes": {
+    "Text1": {
+      "type": "text"
+    },
+    "Text2": {
+      "type": "text"
+    },
+    "Title": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Subtext": {
+      "type": "text"
+    },
+    "Button": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": false
+    },
+    "PricingPoins": {
+      "type": "component",
+      "component": "pages.pricing-box-points",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

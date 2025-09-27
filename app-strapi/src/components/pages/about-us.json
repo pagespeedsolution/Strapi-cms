@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_pages_aboutuses",
+  "info": {
+    "displayName": "AboutUS"
+  },
+  "options": {},
+  "attributes": {
+    "Text1": {
+      "type": "text"
+    },
+    "Text2": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "RightsideImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

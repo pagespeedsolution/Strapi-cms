@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_pages_mission_visions",
+  "info": {
+    "displayName": "MissionVision"
+  },
+  "options": {},
+  "attributes": {
+    "LeftImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "text"
+    },
+    "MissionVisionItem": {
+      "type": "component",
+      "component": "shared.icon-title-description",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

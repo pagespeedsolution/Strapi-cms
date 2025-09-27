@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "count_percentage_banners",
+  "info": {
+    "singularName": "count-percentage-banner",
+    "pluralName": "count-percentage-banners",
+    "displayName": "CountPercentageBanner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CountPercentageBanner": {
+      "type": "component",
+      "component": "pages.count-portfolio-banner",
+      "repeatable": true
+    }
+  }
+}

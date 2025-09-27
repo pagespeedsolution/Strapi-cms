@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pages_testimonials",
+  "info": {
+    "displayName": "Testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "LabelText": {
+      "type": "component",
+      "component": "shared.richtext",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

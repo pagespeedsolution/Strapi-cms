@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "optimization_processes",
+  "info": {
+    "singularName": "optimization-process",
+    "pluralName": "optimization-processes",
+    "displayName": "OptimizationProcess"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OptimizationProcess": {
+      "type": "component",
+      "component": "pages.optimization-process",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_pages_contact_us_items",
+  "info": {
+    "displayName": "ContactUsItem"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Tag": {
+      "type": "text"
+    },
+    "ContentwithLinks": {
+      "type": "component",
+      "component": "pages.contentwith-links",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_pages_pricing_box_points",
+  "info": {
+    "displayName": "PricingBoxPoints"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Points": {
+      "type": "component",
+      "component": "shared.icon-label",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

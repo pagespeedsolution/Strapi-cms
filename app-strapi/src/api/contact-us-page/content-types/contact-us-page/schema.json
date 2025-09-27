@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_us_pages",
+  "info": {
+    "singularName": "contact-us-page",
+    "pluralName": "contact-us-pages",
+    "displayName": "ContactUsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroBanner": {
+      "type": "component",
+      "component": "pages.home-hero",
+      "repeatable": false
+    },
+    "ContactUsItem": {
+      "type": "component",
+      "component": "pages.contact-us-item",
+      "repeatable": true
+    },
+    "footer_form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::footer-form.footer-form"
+    }
+  }
+}

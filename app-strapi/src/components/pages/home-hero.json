@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_pages_home_heroes",
+  "info": {
+    "displayName": "HomeHero"
+  },
+  "options": {},
+  "attributes": {
+    "h1": {
+      "type": "text"
+    },
+    "Text1": {
+      "type": "text"
+    },
+    "Text2": {
+      "type": "text"
+    },
+    "HeroContent": {
+      "type": "blocks"
+    },
+    "ButtonLink": {
+      "type": "component",
+      "component": "shared.links",
+      "repeatable": false
+    },
+    "RightsideImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
