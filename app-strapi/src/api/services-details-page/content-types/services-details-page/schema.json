@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Slug": {
+      "type": "text"
+    },
     "HeroBanner": {
       "type": "component",
       "component": "pages.hero-banner",

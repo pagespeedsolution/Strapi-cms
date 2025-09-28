@@ -986,6 +986,7 @@ export interface ApiServicesDetailsPageServicesDetailsPage
       'api::why-choose.why-choose'
     >;
     ServiceAboutus: Schema.Attribute.Component<'pages.service-aboutus', false>;
+    Slug: Schema.Attribute.Text;
     testimonial: Schema.Attribute.Relation<
       'oneToOne',
       'api::testimonial.testimonial'
