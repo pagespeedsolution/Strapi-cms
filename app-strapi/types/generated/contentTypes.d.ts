@@ -645,7 +645,7 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
       'oneToOne',
       'api::footer-form.footer-form'
     >;
-    HeroBanner: Schema.Attribute.Component<'pages.home-hero', false>;
+    HeroBanner: Schema.Attribute.Component<'pages.hero-banner', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
