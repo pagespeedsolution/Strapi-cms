@@ -442,6 +442,7 @@ export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
       'api::our-client.our-client'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     testimonial: Schema.Attribute.Relation<
       'oneToOne',
       'api::testimonial.testimonial'
@@ -505,6 +506,7 @@ export interface ApiB2BPartnershipPageB2BPartnershipPage
       'oneToOne',
       'api::why-choose.why-choose'
     >;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     testimonial: Schema.Attribute.Relation<
       'oneToOne',
       'api::testimonial.testimonial'
@@ -584,6 +586,7 @@ export interface ApiBlogDetailBlogDetail extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     ReferenceTitle: Schema.Attribute.String;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     Slug: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -608,7 +611,10 @@ export interface ApiBlogListingPageBlogListingPage
     draftAndPublish: true;
   };
   attributes: {
-    Categories: Schema.Attribute.Text;
+    blog_categories_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-categories-list.blog-categories-list'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -620,6 +626,7 @@ export interface ApiBlogListingPageBlogListingPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -653,6 +660,7 @@ export interface ApiContactUsPageContactUsPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -860,6 +868,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'oneToOne',
       'api::why-choose.why-choose'
     >;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     ServiceListing: Schema.Attribute.Component<
       'pages.home-service-listing',
       false
@@ -985,6 +994,7 @@ export interface ApiServicesDetailsPageServicesDetailsPage
       'oneToOne',
       'api::why-choose.why-choose'
     >;
+    SEO: Schema.Attribute.Component<'shared.seo', false>;
     ServiceAboutus: Schema.Attribute.Component<'pages.service-aboutus', false>;
     Slug: Schema.Attribute.Text;
     testimonial: Schema.Attribute.Relation<

@@ -73,6 +73,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::footer-form.footer-form"
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

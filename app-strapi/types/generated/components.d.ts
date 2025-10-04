@@ -429,6 +429,22 @@ export interface SharedRichtext extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'SEO';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    noIndex: Schema.Attribute.Boolean;
+    ogDescription: Schema.Attribute.Text;
+    ogImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    ogTitle: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedServiceListItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_service_list_items';
   info: {
@@ -491,6 +507,7 @@ declare module '@strapi/strapi' {
       'shared.logo-and-links': SharedLogoAndLinks;
       'shared.menu-items': SharedMenuItems;
       'shared.richtext': SharedRichtext;
+      'shared.seo': SharedSeo;
       'shared.service-list-item': SharedServiceListItem;
       'shared.title-sub-title': SharedTitleSubTitle;
     }

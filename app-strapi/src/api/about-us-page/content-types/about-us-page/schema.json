@@ -40,6 +40,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::our-client.our-client"
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

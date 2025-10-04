@@ -47,6 +47,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::blog-detail.blog-detail"
+    },
+    "SEO": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
