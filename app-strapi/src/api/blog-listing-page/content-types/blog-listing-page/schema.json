@@ -16,8 +16,10 @@
       "component": "pages.hero-banner",
       "repeatable": false
     },
-    "Categories": {
-      "type": "text"
+    "blog_categories_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-categories-list.blog-categories-list"
     }
   }
 }
