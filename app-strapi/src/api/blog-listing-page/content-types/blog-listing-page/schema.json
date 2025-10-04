@@ -13,7 +13,7 @@
   "attributes": {
     "HeroBanner": {
       "type": "component",
-      "component": "pages.home-hero",
+      "component": "pages.hero-banner",
       "repeatable": false
     },
     "Categories": {

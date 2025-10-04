@@ -612,7 +612,7 @@ export interface ApiBlogListingPageBlogListingPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    HeroBanner: Schema.Attribute.Component<'pages.home-hero', false>;
+    HeroBanner: Schema.Attribute.Component<'pages.hero-banner', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
